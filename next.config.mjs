@@ -8,7 +8,11 @@ const withMDX = mdx({
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   async redirects() {
-    return [{ source: "/", destination: "/about", permanent: false }];
+    return [
+      { source: "/", destination: "/about", permanent: false },
+      { source: "/work", destination: "/project", permanent: true },
+      { source: "/work/:slug", destination: "/project/:slug", permanent: true },
+    ];
   },
   pageExtensions: ["ts", "tsx", "md", "mdx"],
   transpilePackages: ["next-mdx-remote"],

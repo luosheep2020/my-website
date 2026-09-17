@@ -9,7 +9,7 @@ export function RouteGuard({ children }: { children: ReactNode }) {
   const pathname = usePathname();
   const enabled = pathname && (
     routes[pathname as keyof typeof routes] ||
-    (["/blog", "/work"] as const).some((route) => routes[route] && pathname.startsWith(`${route}/`))
+    (["/blog", "/project"] as const).some((route) => routes[route] && pathname.startsWith(`${route}/`))
   );
   return enabled ? <>{children}</> : <NotFound />;
 }

@@ -27,7 +27,7 @@ const siteMetadata = {
 const routes: RoutesConfig = {
   "/": false,
   "/about": true,
-  "/work": true,
+  "/project": true,
   "/blog": true,
   "/gallery": true,
 };
